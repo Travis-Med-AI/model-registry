@@ -11,7 +11,7 @@ jobs:
         id: sync
         with:
           auth: ${{ secrets.GIST_TOKEN }}
-          gist_url: https://gist.github.com/j718/template_manifest.json
+          gist_url: https://gist.github.com/j718/95d3579dffed2c6d1aa87c86f61af3e2
           gist_title: Manifest Template
           gist_description: Manifest Template
-          github_file: manifest_template.json
+          github_file: template_manifest.json
