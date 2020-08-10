@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  gist-sync:
+    name: gist-sync
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: popsiclestick/gist-sync-action@v1.0.0
+        id: sync
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/Travis-Med_AI/manifest_template
+          gist_title: Manifest Template
+          gist_description: Manifest Template
+          github_file: manifest_template.json
